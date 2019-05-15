@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  mongo:
+    image: yuweijun/mongo
+    container_name: mongo-server
+    ports:
+      - "27017:27017"
+    restart: always
+    volumes:
+      - /data/mongo:/var/lib/mongodb
+

@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  hexo:
+    image: yuweijun/hexo-server:3.7.0
+    container_name: hexo-server
+    ports:
+      - "4000:4000"
+    restart: always
+    volumes:
+      - $HOME/.ssh:/root/.ssh
+      - /github.com/hexo:/github.com/hexo
