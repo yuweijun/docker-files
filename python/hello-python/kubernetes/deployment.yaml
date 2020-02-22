@@ -18,6 +18,9 @@ kind: Deployment
 metadata:
   name: hello-python
 spec:
+  selector:
+    matchLabels:
+      app: hello-python
   replicas: 4
   template:
     metadata:
@@ -27,6 +30,5 @@ spec:
       containers:
       - name: hello-python
         image: yuweijun/hello-python:latest
-        imagePullPolicy: Never
         ports:
         - containerPort: 5000
